@@ -1,6 +1,8 @@
 package com.bintics.classroomreservations.infrastructure.persistence;
 
+import com.bintics.classroomreservations.domain.model.ClassRoomId;
 import com.bintics.classroomreservations.domain.model.Reservation;
+import com.bintics.classroomreservations.domain.model.ReservationDate;
 import com.bintics.classroomreservations.domain.repository.ReservationsRepository;
 import com.bintics.classroomreservations.infrastructure.persistence.store.ClassRoomReservationEntity;
 import com.bintics.classroomreservations.infrastructure.persistence.store.ClassRoomReservationEntityRepository;
@@ -24,6 +26,11 @@ public class ClassRoomReservationRepositoryImpl implements ReservationsRepositor
         entity.setCreatedAt(date);
         entity.setUpdatedAt(date);
         this.repository.save(entity);
+    }
+
+    @Override
+    public Reservation findByDate(ClassRoomId classRoomId, ReservationDate reservationDate) {
+        return null;
     }
 
 }

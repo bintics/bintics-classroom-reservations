@@ -7,17 +7,18 @@ import lombok.ToString;
 @EqualsAndHashCode
 public class Reservation {
 
-    private ReservationId id;
+    private final ReservationId id;
+    private final ClassRoomId classRoomId;
+    private final ReservationDate reservationDate;
 
-    private ClassRoomId classRoomId;
-
-    public Reservation(ReservationId id, ClassRoomId classRoomId) {
+    public Reservation(ReservationId id, ClassRoomId classRoomId, ReservationDate reservationDate) {
         this.id = id;
         this.classRoomId = classRoomId;
+        this.reservationDate = reservationDate;
     }
 
-    public static Reservation create(ReservationId id, ClassRoomId classRoomId) {
-        return new Reservation(id, classRoomId);
+    public static Reservation create(ReservationId id, ClassRoomId classRoomId, ReservationDate reservationDate) {
+        return new Reservation(id, classRoomId, reservationDate);
     }
 
     public String id() {
