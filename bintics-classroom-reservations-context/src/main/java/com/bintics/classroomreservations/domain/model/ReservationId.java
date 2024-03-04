@@ -1,18 +1,15 @@
 package com.bintics.classroomreservations.domain.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+public record ReservationId(String value) {
 
-@Getter
-@ToString
-@EqualsAndHashCode
-public class ReservationId {
+    public ReservationId {
+        if (value == null) {
+            throw new RuntimeException("reservation_id is required");
+        }
+    }
 
-    private final String value;
-
-    public ReservationId(String value) {
-        this.value = value;
+    public static ReservationId from(String id) {
+        return new ReservationId(id);
     }
 
 }
