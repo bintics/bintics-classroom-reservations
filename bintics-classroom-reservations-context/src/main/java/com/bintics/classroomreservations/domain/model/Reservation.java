@@ -1,7 +1,6 @@
 package com.bintics.classroomreservations.domain.model;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.ToString;
 
 @ToString
@@ -12,21 +11,21 @@ public class Reservation {
 
     private ClassRoomId classRoomId;
 
-    public Reservation(String id, String classRoomId) {
-        this.id = new ReservationId(id);
-        this.classRoomId = new ClassRoomId(classRoomId);
+    public Reservation(ReservationId id, ClassRoomId classRoomId) {
+        this.id = id;
+        this.classRoomId = classRoomId;
     }
 
-    public static Reservation create(String id, String classRoomId) {
+    public static Reservation create(ReservationId id, ClassRoomId classRoomId) {
         return new Reservation(id, classRoomId);
     }
 
-    public String getId() {
-        return this.id.getValue();
+    public String id() {
+        return this.id.value();
     }
 
-    public String getClassRoomId() {
-        return this.classRoomId.getValue();
+    public String classRoomId() {
+        return this.classRoomId.value();
     }
 
 }

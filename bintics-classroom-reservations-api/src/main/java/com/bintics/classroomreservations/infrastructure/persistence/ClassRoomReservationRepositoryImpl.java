@@ -18,8 +18,8 @@ public class ClassRoomReservationRepositoryImpl implements ReservationsRepositor
     @Override
     public void save(Reservation reservation) {
         var entity = new ClassRoomReservationEntity();
-        entity.setId(reservation.getId());
-        entity.setClassRoomId(reservation.getClassRoomId());
+        entity.setId(reservation.id());
+        entity.setClassRoomId(reservation.classRoomId());
         var date = new Date();
         entity.setCreatedAt(date);
         entity.setUpdatedAt(date);
