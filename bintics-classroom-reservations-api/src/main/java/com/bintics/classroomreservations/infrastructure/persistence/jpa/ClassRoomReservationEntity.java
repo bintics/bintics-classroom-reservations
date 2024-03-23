@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.infrastructure.persistence.store;
+package com.bintics.classroomreservations.infrastructure.persistence.jpa;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,8 +6,8 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
 @Data
+@Entity
 public class ClassRoomReservationEntity implements Serializable {
 
     @Id
@@ -16,6 +16,9 @@ public class ClassRoomReservationEntity implements Serializable {
 
     @Column(nullable = false)
     private String classRoomId;
+
+    @Column(nullable = false)
+    private String status;
 
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)

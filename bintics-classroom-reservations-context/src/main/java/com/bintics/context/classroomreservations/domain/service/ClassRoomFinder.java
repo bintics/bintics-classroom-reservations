@@ -1,8 +1,8 @@
-package com.bintics.classroomreservations.domain.service;
+package com.bintics.context.classroomreservations.domain.service;
 
-import com.bintics.classroomreservations.domain.exception.ClassRoomNotFoundException;
-import com.bintics.classroomreservations.domain.model.ClassRoomId;
-import com.bintics.classroomreservations.domain.repository.ClassRoomRepository;
+import com.bintics.context.classroomreservations.domain.exception.ClassRoomNotFoundException;
+import com.bintics.context.classroomreservations.domain.model.ClassRoomId;
+import com.bintics.context.classroomreservations.domain.repository.ClassRoomRepository;
 
 public class ClassRoomFinder {
 

@@ -1,11 +1,11 @@
 package com.bintics.classroomreservations.infrastructure.persistence;
 
-import com.bintics.classroomreservations.domain.model.ClassRoomId;
-import com.bintics.classroomreservations.domain.model.Reservation;
-import com.bintics.classroomreservations.domain.model.ReservationDate;
-import com.bintics.classroomreservations.domain.repository.ReservationsRepository;
-import com.bintics.classroomreservations.infrastructure.persistence.store.ClassRoomReservationEntity;
-import com.bintics.classroomreservations.infrastructure.persistence.store.ClassRoomReservationEntityRepository;
+import com.bintics.context.classroomreservations.domain.model.ClassRoomId;
+import com.bintics.context.classroomreservations.domain.model.Reservation;
+import com.bintics.context.classroomreservations.domain.model.ReservationDate;
+import com.bintics.context.classroomreservations.domain.repository.ReservationsRepository;
+import com.bintics.classroomreservations.infrastructure.persistence.jpa.ClassRoomReservationEntity;
+import com.bintics.classroomreservations.infrastructure.persistence.jpa.ClassRoomReservationEntityRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -30,6 +30,7 @@ public class ClassRoomReservationRepositoryImpl implements ReservationsRepositor
 
     @Override
     public Reservation findByDate(ClassRoomId classRoomId, ReservationDate reservationDate) {
+        //this.repository.
         return null;
     }
 

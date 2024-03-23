@@ -4,6 +4,8 @@ package com.bintics.classroomreservations.application.api;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 public class CreateReservationHttpRequest {
 
@@ -12,5 +14,8 @@ public class CreateReservationHttpRequest {
 
     @JsonProperty("classroom_id")
     private String classRoomId;
+
+    @JsonProperty("reservation_date")
+    private LocalDateTime reservationDate;
 
 }

@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.domain.model;
+package com.bintics.context.classroomreservations.domain.model;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.domain.exception;
+package com.bintics.context.classroomreservations.domain.exception;
 
 public class ClassRoomNotFoundException extends RuntimeException {
 
