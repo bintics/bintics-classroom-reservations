@@ -22,16 +22,16 @@ public class SubscriptionEntity implements Serializable {
     @Id
     private String id;
 
-    @Getter
     private String clientId;
 
-    @Getter
+    private String planId;
+
     private Double cost;
 
-    @Getter
     private Date startDate;
 
-    @Getter
     private Date endDate;
+
+    private String status;
 
 }

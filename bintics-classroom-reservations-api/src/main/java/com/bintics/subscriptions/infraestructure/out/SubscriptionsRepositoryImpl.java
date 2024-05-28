@@ -19,9 +19,11 @@ public class SubscriptionsRepositoryImpl implements SubscriptionRepository {
                 new Subscription(
                         SubscriptionId.from(e.getId()),
                         e.getClientId(),
+                        e.getPlanId(),
                         e.getCost(),
                         e.getStartDate(),
-                        e.getEndDate()
+                        e.getEndDate(),
+                        e.getStatus()
                 )
         ).orElse(null);
     }

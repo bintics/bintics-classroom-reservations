@@ -5,8 +5,10 @@ import java.util.Date;
 public record GetSubscriptionResponse(
         String id,
         String clientId,
+        String planId,
         Double cost,
         Date startDate,
-        Date endDate
+        Date endDate,
+        String status
 ) {
 }

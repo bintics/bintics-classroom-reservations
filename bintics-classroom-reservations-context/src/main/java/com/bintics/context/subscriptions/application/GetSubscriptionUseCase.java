@@ -11,12 +11,17 @@ public class GetSubscriptionUseCase {
 
     public GetSubscriptionResponse get(GetSubscriptionRequest request) {
         var subscription = this.repository.findById(SubscriptionId.from(request.subscriptionId()));
+        if (subscription == null) {
+            throw new RuntimeException("subscription not found");
+        }
         return new GetSubscriptionResponse(
                 subscription.getId(),
                 subscription.getClientId(),
+                subscription.getPlanId(),
                 subscription.getCost(),
                 subscription.getStartDate(),
-                subscription.getEndDate()
+                subscription.getEndDate(),
+                subscription.getStatus()
         );
     }
 
