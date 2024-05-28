@@ -1,6 +1,6 @@
 package com.bintics.context.classroomreservations.domain.model;
 
-import com.bintics.context.classroomreservations.domain.event.ReservedEvent;
+import com.bintics.context.classroomreservations.domain.event.ReservationCreatedEvent;
 import com.bintics.shared.Date;
 import com.bintics.shared.RootAggregate;
 import lombok.EqualsAndHashCode;
@@ -38,7 +38,7 @@ public class Reservation extends RootAggregate {
                 now,
                 now
         );
-        model.record(new ReservedEvent(
+        model.record(new ReservationCreatedEvent(
                 model.id.value(),
                 classRoomId.value(),
                 reservationDate.value(),

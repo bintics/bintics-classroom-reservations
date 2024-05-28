@@ -25,7 +25,7 @@ public class CreateReservationUseCase {
         var reservationDate = ReservationDate.from(request.reservationDate());
         var time = ReservationTime.from(request.unitTime(), request.time());
 
-        this.ensureNoExistsReservation(classRoomId, reservationDate);
+        //this.ensureNoExistsReservation(classRoomId, reservationDate);
 
         Reservation reservation = Reservation.create(
                 ReservationId.from(request.id()),

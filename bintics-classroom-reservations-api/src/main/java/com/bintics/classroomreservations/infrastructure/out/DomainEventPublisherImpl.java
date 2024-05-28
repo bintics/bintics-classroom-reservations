@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.infrastructure;
+package com.bintics.classroomreservations.infrastructure.out;
 
 import com.bintics.shared.DomainEvent;
 import com.bintics.shared.DomainEventPublisher;

@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.application.api;
+package com.bintics.classroomreservations.infrastructure.in.api;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

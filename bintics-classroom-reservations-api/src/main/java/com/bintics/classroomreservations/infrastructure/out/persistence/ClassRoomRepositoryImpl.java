@@ -1,9 +1,9 @@
-package com.bintics.classroomreservations.infrastructure.persistence;
+package com.bintics.classroomreservations.infrastructure.out.persistence;
 
+import com.bintics.classroomreservations.infrastructure.out.persistence.jpa.ClasRoomEntity;
 import com.bintics.context.classroomreservations.domain.model.ClassRoomId;
 import com.bintics.context.classroomreservations.domain.repository.ClassRoomRepository;
-import com.bintics.classroomreservations.infrastructure.persistence.jpa.ClasRoomEntity;
-import com.bintics.classroomreservations.infrastructure.persistence.jpa.ClassRoomEntityRepository;
+import com.bintics.classroomreservations.infrastructure.out.persistence.jpa.ClassRoomEntityRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 

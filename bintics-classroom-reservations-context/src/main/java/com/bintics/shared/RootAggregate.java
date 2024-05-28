@@ -1,7 +1,5 @@
 package com.bintics.shared;
 
-import com.bintics.context.classroomreservations.domain.event.ReservedEvent;
-
 import java.util.LinkedList;
 import java.util.List;
 

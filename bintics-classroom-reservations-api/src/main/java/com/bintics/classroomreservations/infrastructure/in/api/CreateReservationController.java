@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.application.api;
+package com.bintics.classroomreservations.infrastructure.in.api;
 
 import com.bintics.context.classroomreservations.application.CreateReservationRequest;
 import com.bintics.context.classroomreservations.application.CreateReservationUseCase;
@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
 
 @RestController
 @AllArgsConstructor
@@ -20,7 +22,10 @@ public class CreateReservationController {
         this.useCase.create(new CreateReservationRequest(
                 request.getId(),
                 request.getClassRoomId(),
-                request.getReservationDate()
+                //request.getReservationDate(),
+                LocalDateTime.now(),
+                "sec",
+                1
         ));
     }
 

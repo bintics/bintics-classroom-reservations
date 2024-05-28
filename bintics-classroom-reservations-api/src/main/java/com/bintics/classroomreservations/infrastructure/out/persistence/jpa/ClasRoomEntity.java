@@ -1,4 +1,4 @@
-package com.bintics.classroomreservations.infrastructure.persistence.jpa;
+package com.bintics.classroomreservations.infrastructure.out.persistence.jpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
