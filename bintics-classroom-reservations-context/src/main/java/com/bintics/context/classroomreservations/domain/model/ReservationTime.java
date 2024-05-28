@@ -11,6 +11,9 @@ public record ReservationTime(Time unit, int time) {
         if (unit == null) {
             throw new ClassRoomFieldRequiredException("unit");
         }
+        if (unit != null && unit.trim().length() == 0) {
+            throw new ClassRoomFieldRequiredException("unit");
+        }
         if (time == null) {
             throw new ClassRoomFieldRequiredException("time");
         }
@@ -18,11 +21,13 @@ public record ReservationTime(Time unit, int time) {
             throw new ClassRoomException("time can not is zero");
         }
         for (var u : Time.values()) {
-            if (u.equals(unit.trim().toLowerCase())) {
+            var uu = u.toString();
+            var un = unit.trim().toLowerCase();
+            if (uu.equals(un)) {
                 return new ReservationTime(u, time);
             }
         }
-        return null;
+        throw new RuntimeException("no valid reservation time");
     }
 
     public ChronoUnit getUnit() {
@@ -46,7 +51,7 @@ public record ReservationTime(Time unit, int time) {
 
         @Override
         public String toString() {
-            return this.unit;
+            return this.unit.toLowerCase();
         }
     }
 
