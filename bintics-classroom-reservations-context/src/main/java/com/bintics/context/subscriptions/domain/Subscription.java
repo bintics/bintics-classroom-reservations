@@ -13,11 +13,15 @@ public class Subscription extends RootAggregate {
     @Getter
     private String clientId;
     @Getter
+    private String planId;
+    @Getter
     private Double cost;
     @Getter
     private Date startDate;
     @Getter
     private Date endDate;
+    @Getter
+    private String status;
 
     public Subscription(SubscriptionId id) {
         this.id = id;
