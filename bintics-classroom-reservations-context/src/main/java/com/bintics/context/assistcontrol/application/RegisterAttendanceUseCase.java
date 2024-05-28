@@ -8,7 +8,7 @@ public class RegisterAttendanceUseCase {
 
     private final ClientRepository clientRepository;
 
-    private final SubscriptionRepository subscriptionRepository;
+    private final AttendSubscriptionRepository subscriptionRepository;
 
     private final AttendanceRepository attendanceRepository;
 

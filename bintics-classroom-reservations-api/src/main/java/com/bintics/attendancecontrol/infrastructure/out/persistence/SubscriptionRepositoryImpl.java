@@ -1,12 +1,12 @@
 package com.bintics.attendancecontrol.infrastructure.out.persistence;
 
+import com.bintics.context.assistcontrol.domain.AttendSubscriptionRepository;
 import com.bintics.context.assistcontrol.domain.ClientId;
 import com.bintics.context.assistcontrol.domain.SubscriptionId;
-import com.bintics.context.assistcontrol.domain.SubscriptionRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class SubscriptionRepositoryImpl implements SubscriptionRepository {
+public class SubscriptionRepositoryImpl implements AttendSubscriptionRepository {
 
     @Override
     public SubscriptionId findCurrentSubscription(ClientId clientId) {
