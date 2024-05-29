@@ -1,4 +1,8 @@
 package com.bintics.context.subscriptions.application;
 
-public record GetSubscriptionRequest(String subscriptionId) {
+import java.util.Date;
+
+public record GetSubscriptionRequest(
+        String subscriptionId
+) {
 }
