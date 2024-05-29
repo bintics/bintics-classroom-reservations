@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence.jpa;
+package com.bintics.clients.infrastructure.percistence.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

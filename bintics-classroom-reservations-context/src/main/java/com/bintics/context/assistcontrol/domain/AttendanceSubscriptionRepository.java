@@ -1,6 +1,6 @@
 package com.bintics.context.assistcontrol.domain;
 
-public interface AttendSubscriptionRepository {
+public interface AttendanceSubscriptionRepository {
 
     SubscriptionId findCurrentSubscription(ClientId clientId);
 
