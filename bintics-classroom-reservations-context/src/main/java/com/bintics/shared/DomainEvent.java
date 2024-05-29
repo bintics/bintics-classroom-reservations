@@ -8,12 +8,8 @@ import java.util.UUID;
 @Getter
 public class DomainEvent {
 
-    private final String eventId;
-    private final LocalDateTime createdEvent;
-
-    protected DomainEvent() {
-        this.eventId = UUID.randomUUID().toString();
-        this.createdEvent = LocalDateTime.now();
-    }
+    private final String eventId = UUID.randomUUID().toString();
+    private final LocalDateTime createdEvent = LocalDateTime.now();
+    protected int version = 1;
 
 }

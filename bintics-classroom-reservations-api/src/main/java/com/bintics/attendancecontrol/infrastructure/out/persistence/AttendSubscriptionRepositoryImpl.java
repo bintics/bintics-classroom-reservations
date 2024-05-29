@@ -1,6 +1,6 @@
 package com.bintics.attendancecontrol.infrastructure.out.persistence;
 
-import com.bintics.context.assistcontrol.domain.AttendSubscriptionRepository;
+import com.bintics.context.assistcontrol.domain.AttendanceSubscriptionRepository;
 import com.bintics.context.assistcontrol.domain.ClientId;
 import com.bintics.context.assistcontrol.domain.SubscriptionId;
 import com.bintics.context.subscriptions.application.SearchSubscriptionRequest;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @AllArgsConstructor
-public class AttendSubscriptionRepositoryImpl implements AttendSubscriptionRepository {
+public class AttendSubscriptionRepositoryImpl implements AttendanceSubscriptionRepository {
 
     private final SubscriptionRepository repository;
 
