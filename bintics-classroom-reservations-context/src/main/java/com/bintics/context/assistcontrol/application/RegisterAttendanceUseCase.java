@@ -1,10 +1,13 @@
 package com.bintics.context.assistcontrol.application;
 
 import com.bintics.context.assistcontrol.domain.*;
+import com.bintics.shared.DomainEventPublisher;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class RegisterAttendanceUseCase {
+
+    private final DomainEventPublisher domainEventPublisher;
 
     private final ClientRepository clientRepository;
 
@@ -26,6 +29,7 @@ public class RegisterAttendanceUseCase {
 
         var attendance = Attendance.checkIn(clientId, subscriptionId);
         this.attendanceRepository.save(attendance);
+        this.domainEventPublisher.publish(attendance.pullEvents());
     }
 
 }
