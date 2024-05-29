@@ -11,17 +11,17 @@ public class ClientRegisteredEvent extends DomainEvent {
 
     private final String id;
     private final String name;
-    private final String surName;
+    private final String surname;
     private final String secondSurname;
     private final LocalDate birthDate;
     private final String gender;
     private final LocalDateTime createdAt;
     private final LocalDateTime updatedAt;
 
-    public ClientRegisteredEvent(String id, String name, String surName, String secondSurname, LocalDate birthDate, String gender, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public ClientRegisteredEvent(String id, String name, String surname, String secondSurname, LocalDate birthDate, String gender, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
-        this.surName = surName;
+        this.surname = surname;
         this.secondSurname = secondSurname;
         this.birthDate = birthDate;
         this.gender = gender;
