@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence.jpa;
+package com.bintics.attendance.infrastructure.out.persistence.jpa;
 
 import java.util.Date;
 

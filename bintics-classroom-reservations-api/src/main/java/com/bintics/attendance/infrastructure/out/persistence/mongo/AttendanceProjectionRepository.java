@@ -1,6 +1,5 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence.mongo;
+package com.bintics.attendance.infrastructure.out.persistence.mongo;
 
-import com.bintics.clients.infrastructure.percistence.mongo.ClientRegisteredDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

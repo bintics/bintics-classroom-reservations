@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure;
+package com.bintics.attendance.infrastructure;
 
 import com.bintics.context.assistcontrol.application.RegisterAttendanceUseCase;
 import com.bintics.context.assistcontrol.domain.AttendanceSubscriptionRepository;

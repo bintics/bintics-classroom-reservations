@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence.mongo;
+package com.bintics.attendance.infrastructure.out.persistence.mongo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

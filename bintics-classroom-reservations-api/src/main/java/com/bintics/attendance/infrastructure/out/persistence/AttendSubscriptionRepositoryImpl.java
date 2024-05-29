@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence;
+package com.bintics.attendance.infrastructure.out.persistence;
 
 import com.bintics.context.assistcontrol.domain.AttendanceSubscriptionRepository;
 import com.bintics.context.assistcontrol.domain.ClientId;

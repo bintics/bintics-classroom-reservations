@@ -27,7 +27,7 @@ public class RegisterAttendanceUseCase {
             throw new RuntimeException("you do not have an active subscription");
         }
 
-        var attendance = Attendance.checkIn(clientId, subscriptionId);
+        var attendance = Attendance.register(clientId, subscriptionId);
         this.attendanceRepository.save(attendance);
         this.domainEventPublisher.publish(attendance.pullEvents());
     }

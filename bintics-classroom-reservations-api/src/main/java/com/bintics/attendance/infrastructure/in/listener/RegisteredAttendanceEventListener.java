@@ -1,7 +1,7 @@
-package com.bintics.attendancecontrol.infrastructure.in.listener;
+package com.bintics.attendance.infrastructure.in.listener;
 
-import com.bintics.attendancecontrol.infrastructure.out.persistence.mongo.AttendanceProjectionDocument;
-import com.bintics.attendancecontrol.infrastructure.out.persistence.mongo.AttendanceProjectionRepository;
+import com.bintics.attendance.infrastructure.out.persistence.mongo.AttendanceProjectionDocument;
+import com.bintics.attendance.infrastructure.out.persistence.mongo.AttendanceProjectionRepository;
 import com.bintics.clients.infrastructure.percistence.jpa.ClientEntityRepository;
 import com.bintics.context.assistcontrol.domain.RegisteredAttendanceEvent;
 import com.bintics.subscriptions.infraestructure.out.jpa.SubscriptionEntityRepository;

@@ -1,6 +1,6 @@
-package com.bintics.attendancecontrol.infrastructure.in.api;
+package com.bintics.attendance.infrastructure.in.api;
 
-import com.bintics.attendancecontrol.infrastructure.out.persistence.mongo.AttendanceProjectionRepository;
+import com.bintics.attendance.infrastructure.out.persistence.mongo.AttendanceProjectionRepository;
 import com.bintics.context.assistcontrol.application.RegisterAttendanceRequest;
 import com.bintics.context.assistcontrol.application.RegisterAttendanceUseCase;
 import lombok.AllArgsConstructor;
