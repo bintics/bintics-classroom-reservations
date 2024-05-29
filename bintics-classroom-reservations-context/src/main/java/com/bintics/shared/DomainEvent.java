@@ -9,7 +9,7 @@ import java.util.UUID;
 public class DomainEvent {
 
     private final String eventId = UUID.randomUUID().toString();
-    private final LocalDateTime createdEvent = LocalDateTime.now();
-    protected int version = 1;
+    private final LocalDateTime eventCreatedAt = LocalDateTime.now();
+    protected int eventVersion = 1;
 
 }
