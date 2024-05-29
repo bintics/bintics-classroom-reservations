@@ -40,7 +40,7 @@ public class Attendance extends RootAggregate {
         this.subscriptionId = subscriptionId;
     }
 
-    public static Attendance checkIn(ClientId clientId, SubscriptionId subscriptionId) {
+    public static Attendance register(ClientId clientId, SubscriptionId subscriptionId) {
         String id = UUID.randomUUID().toString();
         var now = new Date();
         var root = new Attendance(id, clientId, now, subscriptionId);

@@ -1,7 +1,7 @@
-package com.bintics.attendancecontrol.infrastructure.out.persistence;
+package com.bintics.attendance.infrastructure.out.persistence;
 
-import com.bintics.attendancecontrol.infrastructure.out.persistence.jpa.AttendanceEntity;
-import com.bintics.attendancecontrol.infrastructure.out.persistence.jpa.AttendanceEntityRepository;
+import com.bintics.attendance.infrastructure.out.persistence.jpa.AttendanceEntity;
+import com.bintics.attendance.infrastructure.out.persistence.jpa.AttendanceEntityRepository;
 import com.bintics.context.assistcontrol.domain.Attendance;
 import com.bintics.context.assistcontrol.domain.AttendanceRepository;
 import lombok.AllArgsConstructor;

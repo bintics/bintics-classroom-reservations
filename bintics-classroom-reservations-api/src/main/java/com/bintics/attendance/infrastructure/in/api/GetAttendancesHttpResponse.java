@@ -1,4 +1,4 @@
-package com.bintics.attendancecontrol.infrastructure.in.api;
+package com.bintics.attendance.infrastructure.in.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
