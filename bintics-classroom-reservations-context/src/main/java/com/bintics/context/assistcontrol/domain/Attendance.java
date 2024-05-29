@@ -44,6 +44,13 @@ public class Attendance extends RootAggregate {
         String id = UUID.randomUUID().toString();
         var now = new Date();
         var root = new Attendance(id, clientId, now, subscriptionId);
+        root.record(new RegisteredAttendanceEvent(
+                root.getId(),
+                root.getClientId(),
+                root.getSubscriptionId(),
+                root.getCheckIn(),
+                root.getCheckOut()
+        ));
         return root;
     }
 
