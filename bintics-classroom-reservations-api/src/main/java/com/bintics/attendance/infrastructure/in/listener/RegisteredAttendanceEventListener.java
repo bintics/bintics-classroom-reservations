@@ -7,17 +7,25 @@ import com.bintics.context.assistcontrol.domain.RegisteredAttendanceEvent;
 import com.bintics.subscriptions.infraestructure.out.jpa.SubscriptionEntityRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.context.event.EventListener;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 @Component
 @AllArgsConstructor
 public class RegisteredAttendanceEventListener {
 
-    private final AttendanceProjectionRepository attendanceProjectionRepository;
+    //private final AttendanceProjectionRepository attendanceProjectionRepository;
 
     private final ClientEntityRepository clientEntityRepository;
 
     private final SubscriptionEntityRepository subscriptionEntityRepository;
+
+    private final MongoTemplate template;
 
     @EventListener
     public void on(RegisteredAttendanceEvent event) {
@@ -35,10 +43,29 @@ public class RegisteredAttendanceEventListener {
                         e.getEndDate(),
                         e.getStatus()
                 )).orElse(null);
-        this.attendanceProjectionRepository.save(new AttendanceProjectionDocument(
+        var attendance = new AttendanceProjectionDocument(
                 client,
-                subscription
-        ));
+                subscription,
+                event.getCheckIn(),
+                event.getCheckOut()
+        );
+
+        //this.attendanceProjectionRepository.save(attendance);
+        var attendedDate = event.getCheckIn();
+        String formatCollectionName = String.format("attendance_%s_%s_%s",
+                getNumWithTwoDigits(attendedDate, "YYYY"),
+                getNumWithTwoDigits(attendedDate, "MM"),
+                getNumWithTwoDigits(attendedDate, "dd"));
+        this.template.save(attendance, formatCollectionName);
+    }
+
+    public static String getNumWithTwoDigits(Date date, String format) {
+        if (date == null) {
+            throw new IllegalArgumentException("Date cannot be null");
+        }
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+        return localDate.format(formatter);
     }
 
 }
