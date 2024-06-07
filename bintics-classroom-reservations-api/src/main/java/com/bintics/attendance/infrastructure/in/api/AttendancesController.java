@@ -6,6 +6,7 @@ import com.bintics.context.assistcontrol.application.RegisterAttendanceUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.stream.Collectors;
 
 @RestController
@@ -18,7 +19,8 @@ public class AttendancesController {
     private final AttendanceProjectionRepository attendanceProjectionRepository;
 
     @GetMapping("/attendances")
-    public GetAttendancesHttpResponse getAttendances() {
+    public GetAttendancesHttpResponse getAttendances(@RequestParam(value = "date", required = false) LocalDate date) {
+
         var items = this.attendanceProjectionRepository.findAll()
                 .stream()
                 .map(d -> new GetAttendancesHttpResponse.AttendanceHttpResponse(

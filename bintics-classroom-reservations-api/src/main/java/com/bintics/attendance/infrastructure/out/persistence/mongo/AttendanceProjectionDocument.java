@@ -33,4 +33,7 @@ public class AttendanceProjectionDocument {
     ) {
     }
 
+    private Date checkIn;
+    private Date checkOut;
+
 }
