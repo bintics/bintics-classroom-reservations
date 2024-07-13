@@ -19,8 +19,6 @@ import java.util.Date;
 @AllArgsConstructor
 public class RegisteredAttendanceEventListener {
 
-    //private final AttendanceProjectionRepository attendanceProjectionRepository;
-
     private final ClientEntityRepository clientEntityRepository;
 
     private final SubscriptionEntityRepository subscriptionEntityRepository;
@@ -50,7 +48,6 @@ public class RegisteredAttendanceEventListener {
                 event.getCheckOut()
         );
 
-        //this.attendanceProjectionRepository.save(attendance);
         var attendedDate = event.getCheckIn();
         String formatCollectionName = String.format("attendance_%s_%s_%s",
                 getNumWithTwoDigits(attendedDate, "YYYY"),
