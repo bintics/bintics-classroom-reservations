@@ -1,7 +1,5 @@
 package com.bintics.shared;
 
-import com.bintics.context.classroomreservations.domain.exception.ClassRoomFieldRequiredException;
-
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -11,7 +9,7 @@ public record Date(LocalDateTime value) {
 
     public Date {
         if (value == null) {
-            throw new ClassRoomFieldRequiredException("date");
+            throw new FieldRequiredException("date");
         }
         ZonedDateTime utcDateTime = value.atZone(ZoneId.systemDefault()).withZoneSameInstant(ZoneId.of("UTC"));
         value = utcDateTime.toLocalDateTime();
